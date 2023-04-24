@@ -25,8 +25,6 @@ class CategoryStore extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'title' => 'nullable|string',
-            'description' => 'nullable|string',
             'status' => 'required|boolean',
         ];
     }

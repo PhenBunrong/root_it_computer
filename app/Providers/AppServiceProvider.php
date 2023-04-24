@@ -27,16 +27,16 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        // $setting = Setting::all('key', 'value')
-        //     ->keyBy('key')
-        //     ->transform(function ($setting){
-        //         return $setting->value;
-        //     })
-        //     ->toArray();
-        // config([
-        //     'settings' => $setting
-        // ]);
+        $setting = Setting::all('key', 'value')
+            ->keyBy('key')
+            ->transform(function ($setting){
+                return $setting->value;
+            })
+            ->toArray();
+        config([
+            'settings' => $setting
+        ]);
 
-        // config(['app.name' => config('settings.app_name')]);
+        config(['app.name' => config('settings.app_name')]);
     }
 }

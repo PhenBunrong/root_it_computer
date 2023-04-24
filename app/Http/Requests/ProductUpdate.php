@@ -28,8 +28,6 @@ class ProductUpdate extends FormRequest
             'name' => 'required|string|max:255',
             'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'image' => 'nullable|image',
-            'title' => 'nullable|string',
-            'description' => 'nullable|string',
             'spl_price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'qty' => 'required|integer',
             'tax_amt' => 'required|string|max:255',

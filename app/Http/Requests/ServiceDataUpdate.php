@@ -27,8 +27,6 @@ class ServiceDataUpdate extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'image' => 'nullable|image',
-            'title' => 'nullable|string',
-            'description' => 'nullable|string',
             'status' => 'required|boolean',
         ];
     }
